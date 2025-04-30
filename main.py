@@ -9,11 +9,13 @@ import torchvision.transforms as transforms
 from torchvision.models import resnet18
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
+from models import FractionalResNet18
+import time
 
 # Set quick flushing for slurm output
 sys.stdout.reconfigure(line_buffering=True, write_through=True)
 
-def train(model, trainloader, testloader, optimizer, criterion, device, epochs):
+def train(model, trainloader, testloader, optimizer, criterion, device, epochs, file):
     model.train()
     train_losses = []
     train_accuracies = []
@@ -48,7 +50,7 @@ def train(model, trainloader, testloader, optimizer, criterion, device, epochs):
         print(f"Epoch {epoch+1}: Loss={epoch_loss:.3f}, "
               f"Train Acc={epoch_acc:.2f}%, Test Acc={test_acc:.2f}%")
         
-        update_plots(range(1, epoch+2), train_losses, train_accuracies, test_accuracies)
+        update_plots(range(1, epoch+2), train_losses, train_accuracies, test_accuracies, file)
 
 def test(model, testloader, device):
     model.eval()
@@ -65,7 +67,7 @@ def test(model, testloader, device):
     print(f"Test Accuracy: {test_acc:.2f}%")
     return test_acc
 
-def update_plots(epochs, train_losses, train_accuracies, test_accuracies):
+def update_plots(epochs, train_losses, train_accuracies, test_accuracies, file):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 5))
 
     ax1.plot(epochs, train_losses, label='Train Loss', color='red')
@@ -82,7 +84,7 @@ def update_plots(epochs, train_losses, train_accuracies, test_accuracies):
     ax2.legend()
 
     plt.tight_layout()
-    plt.savefig(f"plots/base.png")
+    plt.savefig(f"plots/{file}.png")
     plt.close(fig)  # Free up memory
 
 def main(*ARGS):
@@ -99,9 +101,24 @@ def main(*ARGS):
         help="Batch size.",
     )
     parser.add_argument(
-        "--base",
-        action="store_true",
-        help="Use base resnet.",
+        "--method",
+        required=False,
+        default="base",
+        help="Gradient method: base, GL.",
+    )
+    parser.add_argument(
+        "--alpha",
+        type=float,
+        required=False,
+        default=1,
+        help="Derivative alpha.",
+    )
+    parser.add_argument(
+        "--max-history",
+        type=int,
+        required=False,
+        default=20,
+        help="Max number of prior gradients stored.",
     )
     parser.add_argument(
         "--lr",
@@ -122,7 +139,9 @@ def main(*ARGS):
 
     # Parse the command line arguments.
     batch_size = args.batch_size
-    base = args.base
+    method = args.method
+    alpha = args.alpha
+    max_history = args.max_history
     lr = args.lr
     num_epochs = args.num_epochs
 
@@ -144,14 +163,25 @@ def main(*ARGS):
 
     os.makedirs("plots", exist_ok=True)
 
-    model = resnet18(weights=None)
-    model.fc = nn.Linear(model.fc.in_features, 10)  # 10 classes for CIFAR-10
+    file = f"{method}_a{alpha}".replace('.', '_')
+
+    if method == "base":
+        model = resnet18(weights=None)
+        model.fc = nn.Linear(model.fc.in_features, 10)
+    elif method == "GL":
+        model = FractionalResNet18(alpha=alpha, max_history=max_history)
+    else:
+        raise ValueError(f"Unknown method: {method}")
     model = model.to(device)
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(model.parameters(), lr=lr, momentum=0.9, weight_decay=5e-4)
+    optimizer = optim.SGD(model.parameters(), lr=lr, weight_decay=1e-5)
 
-    train(model, trainloader, testloader, optimizer, criterion, device, num_epochs)
+    print(f"\n--- Training with {method} α={alpha} ---")
+    run_start = time.time()
+    train(model, trainloader, testloader, optimizer, criterion, device, num_epochs, file)
+    run_end = time.time()
+    print(f"Total training time: {(run_end-run_start):.2f}s")
 
 #
 if __name__ == "__main__":

@@ -1,0 +1,172 @@
+Current conda environment:
+# conda environments:
+#
+base                     /apps/cent7/anaconda/2024.02
+CS587                 *  /home/ehli/.conda/envs/cent7/2024.02-py311/CS587
+
+
+Files already downloaded and verified
+Files already downloaded and verified
+
+--- Training with GL α=1.1 ---
+Test Accuracy: 27.31%
+Epoch 1: Loss=2.140, Train Acc=21.83%, Test Acc=27.31%
+Test Accuracy: 29.62%
+Epoch 2: Loss=2.012, Train Acc=26.16%, Test Acc=29.62%
+Test Accuracy: 32.27%
+Epoch 3: Loss=1.883, Train Acc=31.36%, Test Acc=32.27%
+Test Accuracy: 37.34%
+Epoch 4: Loss=1.806, Train Acc=34.34%, Test Acc=37.34%
+Test Accuracy: 39.70%
+Epoch 5: Loss=1.727, Train Acc=37.50%, Test Acc=39.70%
+Test Accuracy: 40.27%
+Epoch 6: Loss=1.668, Train Acc=39.37%, Test Acc=40.27%
+Test Accuracy: 38.90%
+Epoch 7: Loss=1.621, Train Acc=40.94%, Test Acc=38.90%
+Test Accuracy: 43.45%
+Epoch 8: Loss=1.585, Train Acc=42.40%, Test Acc=43.45%
+Test Accuracy: 44.43%
+Epoch 9: Loss=1.577, Train Acc=42.79%, Test Acc=44.43%
+Test Accuracy: 44.71%
+Epoch 10: Loss=1.539, Train Acc=44.13%, Test Acc=44.71%
+Test Accuracy: 45.38%
+Epoch 11: Loss=1.514, Train Acc=44.99%, Test Acc=45.38%
+Test Accuracy: 46.64%
+Epoch 12: Loss=1.487, Train Acc=45.96%, Test Acc=46.64%
+Test Accuracy: 45.98%
+Epoch 13: Loss=1.470, Train Acc=46.75%, Test Acc=45.98%
+Test Accuracy: 47.88%
+Epoch 14: Loss=1.456, Train Acc=47.12%, Test Acc=47.88%
+Test Accuracy: 47.90%
+Epoch 15: Loss=1.431, Train Acc=48.08%, Test Acc=47.90%
+Test Accuracy: 47.70%
+Epoch 16: Loss=1.417, Train Acc=48.64%, Test Acc=47.70%
+Test Accuracy: 48.27%
+Epoch 17: Loss=1.401, Train Acc=49.09%, Test Acc=48.27%
+Test Accuracy: 49.08%
+Epoch 18: Loss=1.393, Train Acc=49.69%, Test Acc=49.08%
+Test Accuracy: 47.24%
+Epoch 19: Loss=1.383, Train Acc=49.94%, Test Acc=47.24%
+Test Accuracy: 50.99%
+Epoch 20: Loss=1.367, Train Acc=50.65%, Test Acc=50.99%
+Test Accuracy: 51.20%
+Epoch 21: Loss=1.354, Train Acc=51.37%, Test Acc=51.20%
+Test Accuracy: 51.62%
+Epoch 22: Loss=1.341, Train Acc=51.73%, Test Acc=51.62%
+Test Accuracy: 51.13%
+Epoch 23: Loss=1.332, Train Acc=51.95%, Test Acc=51.13%
+Test Accuracy: 49.22%
+Epoch 24: Loss=1.318, Train Acc=52.63%, Test Acc=49.22%
+Test Accuracy: 52.86%
+Epoch 25: Loss=1.304, Train Acc=53.08%, Test Acc=52.86%
+Test Accuracy: 52.44%
+Epoch 26: Loss=1.286, Train Acc=53.62%, Test Acc=52.44%
+Test Accuracy: 53.64%
+Epoch 27: Loss=1.277, Train Acc=54.11%, Test Acc=53.64%
+Test Accuracy: 53.79%
+Epoch 28: Loss=1.269, Train Acc=54.57%, Test Acc=53.79%
+Test Accuracy: 54.42%
+Epoch 29: Loss=1.255, Train Acc=55.22%, Test Acc=54.42%
+Test Accuracy: 54.62%
+Epoch 30: Loss=1.246, Train Acc=55.41%, Test Acc=54.62%
+Test Accuracy: 54.60%
+Epoch 31: Loss=1.247, Train Acc=55.51%, Test Acc=54.60%
+Test Accuracy: 54.86%
+Epoch 32: Loss=1.234, Train Acc=56.03%, Test Acc=54.86%
+Test Accuracy: 53.04%
+Epoch 33: Loss=1.235, Train Acc=56.03%, Test Acc=53.04%
+Test Accuracy: 55.85%
+Epoch 34: Loss=1.226, Train Acc=56.24%, Test Acc=55.85%
+Test Accuracy: 56.15%
+Epoch 35: Loss=1.208, Train Acc=57.00%, Test Acc=56.15%
+Test Accuracy: 56.25%
+Epoch 36: Loss=1.188, Train Acc=57.74%, Test Acc=56.25%
+Test Accuracy: 57.46%
+Epoch 37: Loss=1.186, Train Acc=57.77%, Test Acc=57.46%
+Test Accuracy: 55.16%
+Epoch 38: Loss=1.176, Train Acc=58.28%, Test Acc=55.16%
+Test Accuracy: 56.79%
+Epoch 39: Loss=1.158, Train Acc=58.76%, Test Acc=56.79%
+Test Accuracy: 58.69%
+Epoch 40: Loss=1.155, Train Acc=59.03%, Test Acc=58.69%
+Test Accuracy: 57.33%
+Epoch 41: Loss=1.140, Train Acc=59.72%, Test Acc=57.33%
+Test Accuracy: 57.24%
+Epoch 42: Loss=1.127, Train Acc=59.96%, Test Acc=57.24%
+Test Accuracy: 56.56%
+Epoch 43: Loss=1.127, Train Acc=60.03%, Test Acc=56.56%
+Test Accuracy: 59.00%
+Epoch 44: Loss=1.119, Train Acc=60.37%, Test Acc=59.00%
+Test Accuracy: 57.74%
+Epoch 45: Loss=1.111, Train Acc=60.63%, Test Acc=57.74%
+Test Accuracy: 57.83%
+Epoch 46: Loss=1.091, Train Acc=61.48%, Test Acc=57.83%
+Test Accuracy: 58.96%
+Epoch 47: Loss=1.092, Train Acc=61.07%, Test Acc=58.96%
+Test Accuracy: 60.51%
+Epoch 48: Loss=1.072, Train Acc=62.18%, Test Acc=60.51%
+Test Accuracy: 57.49%
+Epoch 49: Loss=1.063, Train Acc=62.60%, Test Acc=57.49%
+Test Accuracy: 59.75%
+Epoch 50: Loss=1.058, Train Acc=62.75%, Test Acc=59.75%
+Test Accuracy: 58.82%
+Epoch 51: Loss=1.049, Train Acc=63.07%, Test Acc=58.82%
+Test Accuracy: 60.51%
+Epoch 52: Loss=1.043, Train Acc=63.06%, Test Acc=60.51%
+Test Accuracy: 58.80%
+Epoch 53: Loss=1.034, Train Acc=63.56%, Test Acc=58.80%
+Test Accuracy: 61.28%
+Epoch 54: Loss=1.028, Train Acc=63.83%, Test Acc=61.28%
+Test Accuracy: 61.04%
+Epoch 55: Loss=1.012, Train Acc=64.38%, Test Acc=61.04%
+Test Accuracy: 58.95%
+Epoch 56: Loss=1.011, Train Acc=64.52%, Test Acc=58.95%
+Test Accuracy: 61.21%
+Epoch 57: Loss=1.001, Train Acc=64.78%, Test Acc=61.21%
+Test Accuracy: 62.00%
+Epoch 58: Loss=0.988, Train Acc=65.15%, Test Acc=62.00%
+Test Accuracy: 62.50%
+Epoch 59: Loss=0.989, Train Acc=65.28%, Test Acc=62.50%
+Test Accuracy: 62.48%
+Epoch 60: Loss=0.976, Train Acc=65.64%, Test Acc=62.48%
+Test Accuracy: 59.82%
+Epoch 61: Loss=0.964, Train Acc=66.16%, Test Acc=59.82%
+Test Accuracy: 61.96%
+Epoch 62: Loss=0.968, Train Acc=65.96%, Test Acc=61.96%
+Test Accuracy: 62.95%
+Epoch 63: Loss=0.956, Train Acc=66.46%, Test Acc=62.95%
+Test Accuracy: 63.12%
+Epoch 64: Loss=0.944, Train Acc=67.03%, Test Acc=63.12%
+Test Accuracy: 61.48%
+Epoch 65: Loss=0.940, Train Acc=67.10%, Test Acc=61.48%
+Test Accuracy: 62.30%
+Epoch 66: Loss=0.928, Train Acc=67.38%, Test Acc=62.30%
+Test Accuracy: 64.08%
+Epoch 67: Loss=0.921, Train Acc=67.97%, Test Acc=64.08%
+Test Accuracy: 63.72%
+Epoch 68: Loss=0.913, Train Acc=68.01%, Test Acc=63.72%
+Test Accuracy: 64.48%
+Epoch 69: Loss=0.925, Train Acc=67.58%, Test Acc=64.48%
+Test Accuracy: 63.51%
+Epoch 70: Loss=0.892, Train Acc=68.67%, Test Acc=63.51%
+Test Accuracy: 61.70%
+Epoch 71: Loss=0.889, Train Acc=68.87%, Test Acc=61.70%
+Test Accuracy: 64.07%
+Epoch 72: Loss=0.881, Train Acc=69.41%, Test Acc=64.07%
+Test Accuracy: 64.57%
+Epoch 73: Loss=0.874, Train Acc=69.56%, Test Acc=64.57%
+Test Accuracy: 64.66%
+Epoch 74: Loss=0.866, Train Acc=69.71%, Test Acc=64.66%
+Test Accuracy: 63.99%
+Epoch 75: Loss=0.854, Train Acc=70.11%, Test Acc=63.99%
+Test Accuracy: 64.56%
+Epoch 76: Loss=0.847, Train Acc=70.55%, Test Acc=64.56%
+Test Accuracy: 64.82%
+Epoch 77: Loss=0.838, Train Acc=70.68%, Test Acc=64.82%
+Test Accuracy: 65.92%
+Epoch 78: Loss=0.831, Train Acc=71.12%, Test Acc=65.92%
+Test Accuracy: 65.46%
+Epoch 79: Loss=0.826, Train Acc=71.19%, Test Acc=65.46%
+Test Accuracy: 65.28%
+Epoch 80: Loss=0.819, Train Acc=71.43%, Test Acc=65.28%
+Total training time: 11767.64s
